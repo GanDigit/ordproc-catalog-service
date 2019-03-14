@@ -5,7 +5,7 @@ node {
         steps {
             sh 'echo "Compile Started ...."'
             checkout scm
-              sh 'echo "Compile Started 2...."
+              sh 'echo "Compile Started 2...."'
             sh "./gradlew compileJava"
             sh 'echo "Compile Completed ...."'
         }
