@@ -25,7 +25,7 @@ pipeline {
 
         stage("Docker push") {
             steps {
-                sh "docker login -u username -p password"
+                sh "docker login -u ${env.docker-user} -p ${env.docker-password}"
                 sh "docker push gandigit/ordproc-catalog-service"
             }
         }
