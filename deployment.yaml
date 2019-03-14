@@ -5,6 +5,7 @@ metadata:
   labels:
     app: ordproc-catalog-service
 spec:
+  type: NodePort
   ports:
     - port: 7011
       name: http
