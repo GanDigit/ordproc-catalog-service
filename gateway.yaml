@@ -26,8 +26,8 @@ spec:
   - match:
     - uri:
         prefix: /catalog
-      route:
-      - destination:
-          host: ordproc-catalog-service
-          port:
-            number: 8082
+    route:
+    - destination:
+        host: ordproc-catalog-service
+        port:
+          number: 8082
