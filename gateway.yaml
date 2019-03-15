@@ -7,9 +7,9 @@ spec:
     istio: ingressgateway # use istio default controller
   servers:
     - port:
-        number: 80
-        name: http
-        protocol: HTTP
+      number: 80
+      name: http
+      protocol: HTTP
       hosts:
         - "*"
 ---
@@ -24,11 +24,11 @@ spec:
     - ordproc-catalog-service-gateway
   http:
     - match:
-        - uri:
-            prefix: /catalog
-      route:
+      - uri:
+        prefix: /catalog
+        route:
         - destination:
-            host: ordproc-catalog-service
-            port:
-              number: 8082
+          host: ordproc-catalog-service
+          port:
+          number: 8082
 
