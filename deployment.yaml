@@ -7,7 +7,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 7011
+    - port: 8082
       name: http
   selector:
     app: ordproc-catalog-service
@@ -29,4 +29,4 @@ spec:
           image: gandigit/ordproc-catalog-service
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 7011
+            - containerPort: 8082
