@@ -1,33 +1,40 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: ordproc-catalog-service-gateway
+  name: ordproc-catalog-service-gateway1
 spec:
   selector:
-    istio: ingressgateway # use istio default controller 1
+    istio: ingressgateway # use istio default controller
   servers:
-  - port:
-      number: 80
-      name: http
-      protocol: HTTP
-    hosts:
-    - "*"
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "*"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: ordproc-catalog-service
+  name: ordproc-catalog-service1
 spec:
   hosts:
-  - "*"
+    - "*"
   gateways:
-  - ordproc-catalog-service-gateway
+    - ordproc-catalog-service-gateway1
   http:
-  - match:
-    - uri:
-        prefix: /
-    route:
-    - destination:
-        host: ordproc-catalog-service
-        port:
-          number: 8082
+    - match:
+        - uri:
+            exact: /productpage
+        - uri:
+            exact: /login
+        - uri:
+            exact: /logout
+        - uri:
+            prefix: /api/v1/products
+      route:
+        - destination:
+            host: ordproc-catalog-service
+            port:
+              number: 8082
+
