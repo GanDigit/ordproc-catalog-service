@@ -10,4 +10,4 @@ parameters:
   secretNamespace: "kube-system"
   volumetype: replicate:3
   volumenameprefix: "icp"
-  default: true
+  default: yes
