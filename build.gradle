@@ -20,7 +20,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	compile group: 'com.ibm', name: 'db2jcc', version: '9'
+	compile group: 'com.ibm.db2.jcc', name: 'db2jcc4', version: '4.24.92'
 
 	//runtimeOnly 'com.h2database:h2'
 }
