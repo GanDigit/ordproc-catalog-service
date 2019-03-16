@@ -6,5 +6,13 @@ create table product
    price int
 );
 
+create table customer
+(
+   id INT PRIMARY KEY ,
+   name varchar(255) not null,
+   address varchar(255) not null
+);
+
+
 
 CREATE TABLE TEST(ID INT PRIMARY KEY, NAME VARCHAR(255));
