@@ -37,4 +37,3 @@ spec:
             host: ordproc-catalog-service
             port:
               number: 8082
-

@@ -28,5 +28,31 @@ spec:
         - name: ordproc-catalog-service
           image: gandigit/ordproc-catalog-service
           imagePullPolicy: IfNotPresent
+          env:
+            - name: JDBC_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: db2
+                  key: host
+            - name: JDBC_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: db2
+                  key: port
+            - name: JDBC_DB
+              valueFrom:
+                secretKeyRef:
+                  name: db2
+                  key: db
+            - name: JDBC_ID
+              valueFrom:
+                secretKeyRef:
+                  name: db2
+                  key: id
+            - name: JDBC_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db2
+                  key: pwd
           ports:
             - containerPort: 8082
