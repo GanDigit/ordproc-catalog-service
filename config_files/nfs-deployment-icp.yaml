@@ -67,9 +67,7 @@ spec:
             - name: SERVICE_NAME
               value: nfs-provisioner
             - name: POD_NAMESPACE
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.namespace
+              value: default
           imagePullPolicy: "IfNotPresent"
           volumeMounts:
           - name: export-volume
