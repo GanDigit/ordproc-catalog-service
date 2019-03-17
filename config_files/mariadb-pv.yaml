@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"name":"mongodb-10.41.15.23","namespace":""},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"20Gi"},"local":{"path":"/var/lib/icp/mongodb"},"nodeAffinity":{"required":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/hostname","operator":"In","values":["10.41.15.23"]}]}]}},"persistentVolumeReclaimPolicy":"Retain","storageClassName":"mongodb-storage"}}
+    pv.kubernetes.io/bound-by-controller: "yes"
+  creationTimestamp: null
+  finalizers:
+    - kubernetes.io/pv-protection
+  name: mongodb-10.41.15.23
+  selfLink: /api/v1/persistentvolumes/mongodb-10.41.15.23
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 20Gi
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: mongodbdir-icp-mongodb-0
+    namespace: kube-system
+    resourceVersion: "4915"
+    uid: b7b6e67d-2f7b-11e9-8286-00000a290f17
+  local:
+    path: /var/lib/icp/mongodb
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - 10.41.15.23
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: mongodb-storage
+status: {}

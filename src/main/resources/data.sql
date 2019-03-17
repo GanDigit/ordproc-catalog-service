@@ -11,10 +11,10 @@ values(10003,'Computer', 'Dell3', 25000);
 insert into customer
 values(101,'Cus 1', 'City 1', );
 insert into customer
-values(101,'Cus 2', 'City 2', );
+values(102,'Cus 2', 'City 2', );
 insert into customer
-values(101,'Cus 3', 'City 3', );
+values(103,'Cus 3', 'City 3', );
 insert into customer
-values(101,'Cus 4', 'City 4', );
+values(104,'Cus 4', 'City 4', );
 insert into customer
-values(101,'Cus 5', 'City 5', );
+values(105,'Cus 5', 'City 5', );
