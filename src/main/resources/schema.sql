@@ -3,6 +3,7 @@ create table product
    id INT PRIMARY KEY ,
    category varchar(255) not null,
    name varchar(255) not null,
+   description varchar(255) not null,
    price int
 );
 

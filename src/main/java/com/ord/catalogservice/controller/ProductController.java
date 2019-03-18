@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class ProductController {
 
@@ -15,6 +16,7 @@ public class ProductController {
 
     @GetMapping("/products")
     private List<Product> getAllProducts() {
+        System.out.println("getAllProducts proudct --->");
         return productService.getAllProducts();
     }
 
@@ -29,8 +31,9 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/products", method = RequestMethod.PUT)
-    private int saveProduct(@RequestBody Product product) {
+    private Product saveProduct(@RequestBody Product product) {
+        System.out.println("Save proudct --->");
         productService.saveOrUpdate(product);
-        return product.getId();
+        return product;
     }
 }
