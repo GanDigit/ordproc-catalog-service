@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: <PROJECT>-catalog-service
-  namespace: <PROJECT>
+#  namespace: <PROJECT>
   labels:
     app: <PROJECT>-catalog-service
 spec:
@@ -22,5 +22,5 @@ spec:
           ports:
             - containerPort: 80
               name: http-server
-      imagePullSecrets:
-        - name: bluemix-calculator-secret
+#      imagePullSecrets:
+#        - name: icp-ordproc-secret
