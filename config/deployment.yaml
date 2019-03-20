@@ -16,7 +16,7 @@ spec:
         app: <PROJECT>-catalog-service
     spec:
       containers:
-        - image: <CONTAINER>
+        - image: <DOCKER_IMAGE>
           name: <PROJECT>-catalog-service
           imagePullPolicy: Always
           ports:
